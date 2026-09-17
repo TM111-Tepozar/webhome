@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Home</title>
+    <link rel="icon" href="./icon.png">
+</head>
+
+<link rel="stylesheet" href="./style.css">
+
+<header>
+    <div class="clock" id="clock">00:00:00</div>
+</header>
+<body>
+    <div class="main">
+        <h1 class="title">Web-Home</h1>
+
+        <div class="search-box">
+            <form action="https://duckduckgo.com/" method="get">
+                <input type="text" id="search-input" placeholder="Search privatly" name="q">
+            </form>
+        </div>
+
+        <div class="shortcuts">
+            <button class="add" onclick="openModal()">+ Add Shortcut</button>
+            <div id="shortcut-grid"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <h3>Add Shortcut</h3>
+            <input type="text" id="shortcut-name" placeholder="Name">
+            <input type="text" id="shortcut-url" placeholder="URL">
+            <div class="modal-buttons">
+                <button onclick="closeModal()">Cancel</button>
+                <button onclick="saveShortcut()">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<main>
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button onclick="prevMonth()">&lt;</button>
+                <h2 id="calendar-month-year"></h2>
+                <button onclick="nextMonth()">&gt;</button>
+            </div>
+            <div class="calendar-weekdays">
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+                <div>Sun</div>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+        </div>
+    </div>
+</main>
+
+</html>
